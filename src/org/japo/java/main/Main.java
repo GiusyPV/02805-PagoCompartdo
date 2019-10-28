@@ -23,33 +23,33 @@ import java.util.Scanner;
  * @author Josefina Pugliese Vazquez
  */
 public class Main {
-    
+
     public static final Scanner SCN
             = new Scanner(System.in, "Windows-1252")
                     .useLocale(Locale.ENGLISH).useDelimiter("\\s+");
 
     public static void main(String[] args) {
-        
+
         double impCena;
         int numPersonas;
-        
+
         try {
             System.out.print("Importe cena (€) ..: ");
             impCena = SCN.nextDouble();
-            
+
             System.out.print("Número comensales .: ");
             numPersonas = SCN.nextInt();
-            
+
             System.out.println("--------------------------");
-            
+
             System.out.printf("Importe cena (€) ..: %.2f%n", impCena);
             System.out.printf("Número comensales .: %d%n", numPersonas);
             System.out.printf("Pago por comensal .: %.2f%n", impCena / numPersonas);
-            
+
         } catch (Exception e) {
-            
+
             System.out.println("ERROR: Entrada incorrecta");
         }
-        
+
     }
 }
